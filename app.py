@@ -152,11 +152,11 @@ class SetFrameRange(Application):
                             % (type(result).__name__), result)
         return result 
 
-    def set_frame_range(self, engine, in_frame, out_frame):
+    def set_frame_range(self, engine, head_in_frame, in_frame, out_frame, tail_out_frame):
         try:
             result = self.execute_hook("hook_frame_operation",
                                        operation="set_frame_range",
-                                       head_in_frame=head_in_frame
+                                       head_in_frame=head_in_frame,
                                        in_frame=in_frame,
                                        out_frame=out_frame,
                                        tail_out_frame=tail_out_frame
